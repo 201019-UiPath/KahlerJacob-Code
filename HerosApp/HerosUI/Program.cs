@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HerosApp
+namespace HerosUI
 {
     class Program
     {

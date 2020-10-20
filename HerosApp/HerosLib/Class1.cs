@@ -2,7 +2,7 @@
 
 namespace HerosLib
 {
-    public class Heros
+    public class Class1
     {
     }
 }
