@@ -2,6 +2,7 @@
 
 namespace HerosLib
 {
+    /*
     public class Hero
     {
         internal int id;
@@ -18,25 +19,29 @@ namespace HerosLib
        
         public Hero(int newID, string newName)
         {
-            this.id = newID;
-            this.name = newName;
+            id = newID;
+            name = newName;
         }
 
-        public string GetName(){
-            return this.name;
-        }
+      public int Id{get;set;}
 
-        public int GetId(){
-            return this.id;
-        }
+      public string Name{get;set;}
 
-        public void SetName(string n){
-            name = n;
-        }
-
-        public void SetId(int i){
-            id = i;
-        }
 
     }
+    */
+
+    public class Hero{
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public string[] superPowers = new string[10];
+
+        public int[][] ja=new int[3][];
+      
+
+        
+    }
+    
 }
