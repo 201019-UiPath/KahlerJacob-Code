@@ -1,37 +1,34 @@
 using System;
 using Xunit;
 using HerosLib;
-
 namespace HerosTest
 {
     public class HeroTest
     {
         Hero testHero = new Hero();
+
         [Theory]
-        [InlineData("Power of Unix")]
-        [InlineData("Flight")]
+        [InlineData("Unit testing god")]
+        [InlineData("Flying")]
         [InlineData("Laser Eyes")]
         public void AddSuperPowerShouldAddSuperpower(string superPower)
         {
-                // Arrange - Arranging artifacts I might need to test
-                
-                
+            //Act (Do the thing you wanna test)
+            testHero.AddSuperPower(superPower);
 
-                //Act - Doing the things
-                testHero.AddSuperPower(superPower);
-
-                //Assert
-                Assert.Equal(superPower, Hero.superPowers.Peek());
-
+            //Assert
+            Assert.Equal(superPower, Hero.superPowers.Peek());
         }
 
         [Theory]
         [InlineData("")]
         [InlineData(null)]
-
-        public void AddSuperPowerShouldThrowArgumentException(string superPower){
-
+        public void AddSuperPowerShouldThrowArgumentException(string superPower)
+        {
+            //Catching exceptions in unit tests, act and assert are in same 
+            //Act and Assert are in the same line
             Assert.Throws<ArgumentException>(() => testHero.AddSuperPower(superPower));
         }
+
     }
 }
