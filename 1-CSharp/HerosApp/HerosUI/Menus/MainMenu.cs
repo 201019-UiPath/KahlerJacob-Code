@@ -15,7 +15,7 @@ namespace HerosUI.Menus
             do{
                 System.Console.WriteLine("Welcome Friend! What would you like to do today?");
                 //Options
-                System.Console.WriteLine("[0] Create a hero \n[1] Get all heroes");
+                System.Console.WriteLine("[0] Create a hero \n[1] Get all heroes \n[2] Exit");
                 userInput = System.Console.ReadLine();
                 switch (userInput)
                 {
@@ -30,10 +30,14 @@ namespace HerosUI.Menus
                             System.Console.WriteLine($"Hero {hero.Name}");
                         }
                         break;
+                    case "2":
+                        System.Console.WriteLine("Goodbye friend.");
+                        break;
+                    default:
+                        System.Console.WriteLine("Invalid input! Please select a valid option!");
+                        break;
                 }
-            } while (!userInput.Equals("0") || !userInput.Equals("1"));
-           
-
+            } while (!userInput.Equals("2"));
         }
 
         public Hero GetHeroDetails()
